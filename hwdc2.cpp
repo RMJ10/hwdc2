@@ -630,7 +630,7 @@ void thing_sequence::generate_c(wostream& os, thing * parent, const int argno)
 		}
 		os << L")\n";
 
-		os << L"#define " << parent->el_name() << L"_VALUE_OF(x) (x)\n\n";
+		os << L"#define " << parent->el_name() << L"_VALUE(x) (x)\n\n";
 	}
 }
 
