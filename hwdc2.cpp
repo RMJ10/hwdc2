@@ -628,9 +628,9 @@ void thing_sequence::generate_c(wostream& os, thing * parent, const int argno)
 
 			os << bthings[i]->el_name() << L"_DEFAULT << _" << bthings[i]->el_name() << "_SHIFT)";
 		}
-		os << L")\n\n";
+		os << L")\n";
 
-
+		os << L"#define " << parent->el_name() << L"_VALUE_OF(x) (x)\n\n";
 	}
 }
 
